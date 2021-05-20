@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/toolbar_bg2"
+    android:layout_height="56dp">
+
+<ImageView
+    android:layout_width="25dp"
+    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+    android:layout_marginLeft="15dp"
+    android:layout_alignParentLeft="true"
+    android:layout_height="match_parent"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_centerInParent="true"
+    android:text="Auction Details"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:textSize="15dp"
+    android:fontFamily="@font/poppins"
+    android:layout_height="wrap_content"/>
+
+<ImageView
+    android:layout_width="25dp"
+    android:src="@drawable/ic_baseline_exit_to_app_24"
+    android:layout_marginLeft="15dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="15dp"
+    android:layout_height="match_parent"/>
+
+</RelativeLayout>
+
+<ImageView
+    android:layout_width="match_parent"
+    android:src="@color/gray"
+    android:layout_centerInParent="true"
+    android:id="@+id/item_img"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="56dp"
+    android:layout_height="200dp"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bottom_nav_bg"
+    android:layout_height="56dp" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ImageView
+    android:layout_width="20dp"
+    android:id="@+id/home_img"
+    android:layout_weight="1"
+    android:padding="10dp"
+    android:src="@drawable/ic_home"
+    android:layout_height="match_parent"/>
+
+<ImageView
+    android:layout_width="20dp"
+    android:src="@drawable/ic_present_box"
+    android:layout_weight="1"
+    android:padding="10dp"
+    android:layout_height="match_parent"/>
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_weight="2"
+    android:layout_height="match_parent"/>
+
+<ImageView
+    android:layout_width="20dp"
+    android:src="@drawable/ic_counterclockwise_rotation"
+    android:layout_weight="1"
+    android:padding="10dp"
+    android:layout_height="match_parent"/>
+
+<ImageView
+    android:layout_width="20dp"
+    android:src="@drawable/ic_user"
+    android:layout_weight="1"
+    android:padding="10dp"
+    android:layout_height="match_parent"/>
+
+</LinearLayout>
+
+</RelativeLayout>
+
+<com.example.moeidbannerlibrary.banner.BannerLayout
+    android:id="@+id/Banner"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    app:autoPlaying="false"
+    app:centerScale="1.6"
+    app:itemSpace="0"
+    android:visibility="gone"
+    android:layout_below="@+id/item_img"
+    app:moveSpeed="0.5"
+    app:showIndicator="false"/>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/card1_bg"
+    android:layout_below="@id/item_img"
+    android:layout_marginBottom="56dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+<ImageView
+    android:layout_width="25dp"
+    android:layout_gravity="center_horizontal"
+    android:src="@drawable/ic_baseline_expand_more_24"
+    android:id="@+id/viewIMG"
+    android:layout_height="25dp"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<TextView
+    android:layout_width="match_parent"
+    android:id="@+id/product_nameTV"
+    android:layout_centerInParent="true"
+    android:layout_alignParentTop="true"
+    android:textStyle="bold"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:text="iPhone Pro 11"
+    android:fontFamily="@font/poppins"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:id="@+id/product_deailsTV"
+    android:layout_below="@id/product_nameTV"
+    android:fontFamily="@font/poppins"
+    android:text="iphone pro gray 256 G new brand \n Original cost 345 KD"
+    android:textStyle="normal"
+    android:textAlignment="center"
+    android:textColor="@color/gray"
+    android:layout_height="wrap_content"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/product_deailsTV"
+    android:background="@drawable/card2_bg"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_centerInParent="true"
+    android:id="@+id/tab1"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/poppins_bold"
+    android:text="Current Price"
+    android:textAlignment="center"
+    android:textColor="@color/green"
+    android:layout_weight="1"
+    android:textSize="25dp"
+    android:textStyle="bold" />
+
+<TextView
+    android:id="@+id/current_priceTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/poppins_bold"
+    android:text=" 10.500 KD"
+    android:textAlignment="center"
+    android:layout_weight="1"
+    android:textColor="@color/green"
+    android:textSize="25dp"
+    android:textStyle="bold" />
+
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_centerInParent="true"
+    android:id="@+id/tab2"
+    android:layout_below="@id/tab1"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:fontFamily="@font/poppins"
+    android:text="Minimun Price"
+    android:textStyle="normal"
+    android:textAlignment="center"
+    android:layout_weight="1"
+    android:textColor="@color/white"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:id="@+id/minimum_priceTV"
+    android:fontFamily="@font/poppins"
+    android:text="28.500 KD"
+    android:textStyle="normal"
+    android:textAlignment="center"
+    android:layout_weight="1"
+    android:textColor="@color/white"
+    android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_centerInParent="true"
+    android:id="@+id/tab3"
+    android:layout_below="@id/tab2"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:id="@+id/timerTV"
+    android:layout_below="@+id/minimum_priceTV"
+    android:fontFamily="@font/poppins_bold"
+    android:text="00:00:"
+    android:textStyle="normal"
+    android:textSize="15dp"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:id="@+id/timer1TV"
+    android:layout_below="@+id/minimum_priceTV"
+    android:fontFamily="@font/poppins_bold"
+    android:text="09s"
+    android:textSize="15dp"
+    android:textStyle="normal"
+    android:textAlignment="center"
+    android:textColor="@color/teal_200"
+    android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/tab3"
+    android:background="@drawable/card2_bg"
+    android:layout_height="match_parent">
+
+<ImageView
+    android:layout_width="25dp"
+    android:layout_gravity="center_horizontal"
+    android:src="@drawable/ic_baseline_expand_less_24"
+    android:layout_centerInParent="true"
+    android:layout_alignParentTop="true"
+    android:layout_height="25dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:id="@+id/list_bids"
+    android:layout_height="wrap_content">
+
+<ImageView
+    android:layout_width="50dp"
+    android:src="@drawable/ic_user"
+    android:background="@drawable/circle_photo"
+    android:layout_marginLeft="20dp"
+    android:layout_height="50dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:text="Mohammad Ali"
+    android:textColor="@color/white"
+    android:textAlignment="center"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:layout_width="80dp"
+    android:text="27.90 KD"
+    android:id="@+id/bid_priceTV"
+    android:layout_marginRight="15dp"
+    android:textColor="@color/white"
+    android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>
+
+</LinearLayout>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/card3_bg"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="56dp"
+    android:layout_height="120dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:text="Auto Bid"
+    android:textColor="@color/white"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:layout_height="wrap_content"/>
+
+<ToggleButton
+    android:id="@+id/chkState"
+    android:layout_width="50dp"
+    android:layout_height="30dp"
+    android:background="@drawable/toggle_selector"
+    android:textOff=""
+    android:layout_marginTop="10dp"
+    android:textOn=""/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:text="You have"
+    android:textColor="@color/white"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:layout_width="80dp"
+    android:text="500"
+    android:textStyle="bold"
+    android:fontFamily="@font/poppins_bold"
+    android:textColor="@color/white"
+    android:textSize="20dp"
+    android:gravity="center"
+    android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="60dp"
+    android:background="@drawable/circle_bid"
+    android:text="Bid"
+    android:textColor="@color/white"
+    android:textAlignment="center"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:fontFamily="@font/poppins_bold"
+    android:layout_height="60dp"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>
+
+<TextView
+    android:layout_width="70dp"
+    android:layout_centerInParent="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="28dp"
+    android:text="$"
+    android:textSize="35dp"
+    android:gravity="center"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:fontFamily="@font/poppins_bold"
+    android:background="@drawable/circle_doler"
+    android:layout_height="70dp"/>
+
+</RelativeLayout>
